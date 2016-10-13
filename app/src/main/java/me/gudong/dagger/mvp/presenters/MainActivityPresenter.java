@@ -9,6 +9,7 @@ import java.util.List;
 import me.gudong.dagger.mvp.model.ApiService;
 import me.gudong.dagger.mvp.model.entity.Gank;
 import me.gudong.dagger.mvp.model.entity.GankData;
+import me.gudong.dagger.mvp.model.entity.TypeName;
 import me.gudong.dagger.mvp.views.IMainView;
 import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
@@ -48,7 +49,7 @@ public class MainActivityPresenter {
         int month = calendar.get(Calendar.MONTH)+1;
         int day = calendar.get(Calendar.DAY_OF_MONTH);
 
-        api.getGankData(year, month, day)
+        api.getGankData()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .map(new Func1<GankData, GankData.Result>() {
@@ -86,6 +87,13 @@ public class MainActivityPresenter {
 
                     }
                 });
+
+/*
+        api.queryTypeName()
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe();
+
+                */
     }
 
     private List<Gank> addAllResults(GankData.Result results) {

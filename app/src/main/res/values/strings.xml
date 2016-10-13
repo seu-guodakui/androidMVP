@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">当妹子遇到 MVP+Dagger2</string>
+    <string name="app_name">MVPdemo</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>

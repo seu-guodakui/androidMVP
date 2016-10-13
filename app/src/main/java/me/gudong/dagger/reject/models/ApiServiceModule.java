@@ -21,7 +21,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 @Module
 public class ApiServiceModule {
-    private static final String ENDPOINT="http://gank.avosapps.com/api/";
+   // private static final String ENDPOINT="http://gank.avosapps.com/api/";
+
+    private static final String ENDPOINT="http://10.82.60.223:8080/education/";
 
     final Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'").serializeNulls().create();
 
