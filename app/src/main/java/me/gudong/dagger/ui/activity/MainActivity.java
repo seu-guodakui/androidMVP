@@ -124,7 +124,8 @@ public class MainActivity extends BaseActivity implements IMainView {
 
     @OnClick(R.id.iv_image)
     public void clickMeizi(){
-        MeiziActivity.gotoMeizi(this,(Gank)mIvImage.getTag());
+
+        // MeiziActivity.gotoMeizi(this,(Gank)mIvImage.getTag());
     }
 
 }
